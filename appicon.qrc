@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>toolbarImage/teg_yellow.ico</file>
+    </qresource>
+</RCC>

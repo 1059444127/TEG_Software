@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>822</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="QFrame" name="comsetFrame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pbHideComFrm">
+         <property name="text">
+          <string>隐藏窗口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>曲线</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="4" column="0">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="6" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="9" column="0">
+            <widget class="QPushButton" name="pbClearPlot">
+             <property name="text">
+              <string>清屏</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>样本点：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QSpinBox" name="spNumOfSamples">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="keyboardTracking">
+                <bool>true</bool>
+               </property>
+               <property name="minimum">
+                <number>2</number>
+               </property>
+               <property name="maximum">
+                <number>1000000</number>
+               </property>
+               <property name="singleStep">
+                <number>100</number>
+               </property>
+               <property name="value">
+                <number>10000</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="0">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0">
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0" colspan="2">
+              <widget class="QCheckBox" name="cbAutoScale">
+               <property name="text">
+                <string>自动设置Y轴</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="lYmax">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Y轴最大值：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="lYmin">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Y轴最小值：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="spYmax">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimum">
+                <double>-10000.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>10000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>4096.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QDoubleSpinBox" name="spYmin">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimum">
+                <double>-10000.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>10000.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="5" column="0">
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Y轴范围：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QComboBox" name="cbRangePresets"/>
+             </item>
+            </layout>
+           </item>
+           <item row="8" column="0">
+            <widget class="QPushButton" name="pbPause">
+             <property name="text">
+              <string>暂停</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>日志</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QPlainTextEdit" name="ptLog">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="twCruve">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabOriginCruve">
+       <attribute name="title">
+        <string>原始曲线</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <widget class="Plot" name="plot"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="Plot" name="plot_2"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="Plot" name="plot_3"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="Plot" name="plot_4"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabClotCruve">
+       <attribute name="title">
+        <string>凝血曲线</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <widget class="Plot" name="clotPlot">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1074</width>
+             <height>217</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_21">
+            <item row="0" column="0">
+             <widget class="QFrame" name="frame_11">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_20">
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbChannel">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="lbChannel_2">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_25">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_23">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft JhengHei UI</family>
+                   <pointsize>12</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>CHANEL</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_24">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbChannel_3">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QFrame" name="frame">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_10">
+               <item row="3" column="0">
+                <widget class="QLabel" name="lbRvalue_2">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string>min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_32">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255,170, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>2-8</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string>R</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbRvalue">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbRvalue_3">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QFrame" name="frame_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_11">
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_33">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 255, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>1-3</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbKvalue">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 255, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>N/A</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbKvalue_2">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 255, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>N/A</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_8">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 255, 127);
+font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 255, 127);
+font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>K</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lbKvalue_3">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 255, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>N/A</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QFrame" name="frame_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_12">
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbAngleValue_2">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 85, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 85, 255);
+font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>deg</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_34">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 85, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>55-78</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_5">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 85, 255);
+font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Angle</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbAngleValue">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 85, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lbAngleValue_3">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 85, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QFrame" name="frame_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_13">
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbMAValue_2">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(170, 0, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(170, 0, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbMAValue">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(170, 0, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_36">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(170, 0, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>51-69</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(170, 0, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>MA</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lbMAValue_3">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(170, 0, 127);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="5">
+             <widget class="QFrame" name="frame_5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_14">
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_37">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_27">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>PMA</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_26">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_49">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="6">
+             <widget class="QFrame" name="frame_6">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_15">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>G</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_28">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_14">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>d/sc</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_38">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_51">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_50">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="7">
+             <widget class="QFrame" name="frame_7">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_16">
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_29">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_15">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>EPL</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_16">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>%</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_39">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_46">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_52">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="8">
+             <widget class="QFrame" name="frame_8">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_17">
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_17">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>A</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_18">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_30">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_41">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_45">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_40">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="9">
+             <widget class="QFrame" name="frame_9">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_18">
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_20">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_19">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>CI</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_31">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_42">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_47">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_54">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="10">
+             <widget class="QFrame" name="frame_10">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_19">
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_35">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_21">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>LY30</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_22">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>%</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_43">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 0, 255);
+font: 12pt &quot;Microsoft JhengHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_48">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_55">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Microsoft YaHei UI</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 170, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="11">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="8">
+             <widget class="QLabel" name="label_53">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 170, 0);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>基线调试</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_22">
+        <item row="0" column="0" colspan="2">
+         <widget class="Plot" name="BaseandElasticPlot">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>250</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>250</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="baseAdjtableWidget">
+          <property name="rowCount">
+           <number>8</number>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>通道</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>起始基线值</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>平稳基线值</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>平稳时间</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTableWidget" name="elastictableWidget">
+          <property name="rowCount">
+           <number>8</number>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>通道</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>弹力最高值</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>弹力最低值</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>弹力差值</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>822</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="toolTip">
+     <string>文件</string>
+    </property>
+    <property name="title">
+     <string>文件(&amp;File)</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+    <addaction name="separator"/>
+    <addaction name="action_5"/>
+    <addaction name="action_6"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+    <addaction name="actionExportCsv"/>
+   </widget>
+   <widget class="QMenu" name="menuRecords">
+    <property name="toolTip">
+     <string>记录</string>
+    </property>
+    <property name="title">
+     <string>记录(&amp;Records)</string>
+    </property>
+    <widget class="QMenu" name="menuNewRecords">
+     <property name="toolTip">
+      <string>创建新得病人记录</string>
+     </property>
+     <property name="title">
+      <string>新建记录</string>
+     </property>
+     <addaction name="action_15"/>
+     <addaction name="action_16"/>
+    </widget>
+    <widget class="QMenu" name="menuDelRecords">
+     <property name="toolTip">
+      <string>删除病人信息</string>
+     </property>
+     <property name="title">
+      <string>删除记录</string>
+     </property>
+     <addaction name="action_18"/>
+     <addaction name="action_19"/>
+    </widget>
+    <addaction name="menuNewRecords"/>
+    <addaction name="menuDelRecords"/>
+    <addaction name="separator"/>
+    <addaction name="action_13"/>
+    <addaction name="action_14"/>
+   </widget>
+   <widget class="QMenu" name="menu_QC">
+    <property name="toolTip">
+     <string>质量控制设置</string>
+    </property>
+    <property name="title">
+     <string>质控(&amp;QC)</string>
+    </property>
+    <addaction name="action_QC"/>
+    <addaction name="action_20"/>
+    <addaction name="action_21"/>
+   </widget>
+   <widget class="QMenu" name="menu_Options">
+    <property name="toolTip">
+     <string>设置系统信息</string>
+    </property>
+    <property name="title">
+     <string>设置(&amp;Options)</string>
+    </property>
+    <addaction name="action_maintance"/>
+    <addaction name="action_Preset"/>
+    <addaction name="actionComSet"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="toolTip">
+     <string>本软件的相关帮助信息</string>
+    </property>
+    <property name="title">
+     <string>帮助(&amp;Help)</string>
+    </property>
+    <addaction name="actionHelpAbout"/>
+    <addaction name="action_24"/>
+    <addaction name="action_26"/>
+    <addaction name="action_27"/>
+    <addaction name="actionDemoMode"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>视图(&amp;View)</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuRecords"/>
+   <addaction name="menuView"/>
+   <addaction name="menu_QC"/>
+   <addaction name="menu_Options"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolTip">
+    <string>主菜单栏</string>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPrint"/>
+   <addaction name="actionReport"/>
+   <addaction name="actionPause"/>
+   <addaction name="actionClear"/>
+   <addaction name="actionCase"/>
+   <addaction name="actionStart"/>
+   <addaction name="actionStop"/>
+   <addaction name="actionAdvise"/>
+   <addaction name="actionGuide"/>
+   <addaction name="actionBarCode"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionLogin"/>
+   <addaction name="actionLogout"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <widget class="QToolBar" name="secondToolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolTip">
+    <string>次菜单栏</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPatient"/>
+   <addaction name="actionSites"/>
+   <addaction name="actionActive"/>
+   <addaction name="actionFilter"/>
+   <addaction name="actionData"/>
+   <addaction name="actionMaxShow"/>
+   <addaction name="actionZoomin"/>
+   <addaction name="actionZoomout"/>
+   <addaction name="actionDetails"/>
+   <addaction name="actionMainWindows"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>打开数据库</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>新建数据库</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>合并数据库</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>拆分数据库</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>导入数据</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>导出数据</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/logout_128px_1067869_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/logout_128px_1067869_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="text">
+    <string>病人报告</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="text">
+    <string>检查报告</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="text">
+    <string>新建病人</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>新建病例</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="text">
+    <string>病人信息</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="text">
+    <string>检测样本信息</string>
+   </property>
+  </action>
+  <action name="action_QC">
+   <property name="text">
+    <string>更改QC</string>
+   </property>
+  </action>
+  <action name="action_20">
+   <property name="text">
+    <string>批号</string>
+   </property>
+  </action>
+  <action name="action_21">
+   <property name="text">
+    <string>报告</string>
+   </property>
+  </action>
+  <action name="action_maintance">
+   <property name="text">
+    <string>设备维护</string>
+   </property>
+  </action>
+  <action name="action_Preset">
+   <property name="text">
+    <string>系统预置</string>
+   </property>
+  </action>
+  <action name="action_24">
+   <property name="text">
+    <string>用户手册</string>
+   </property>
+  </action>
+  <action name="actionHelpAbout">
+   <property name="text">
+    <string>关于本软件</string>
+   </property>
+  </action>
+  <action name="action_26">
+   <property name="text">
+    <string>远程帮助</string>
+   </property>
+  </action>
+  <action name="action_27">
+   <property name="text">
+    <string>交流论坛</string>
+   </property>
+  </action>
+  <action name="actionNnnnn">
+   <property name="text">
+    <string>创新</string>
+   </property>
+  </action>
+  <action name="actionComSet">
+   <property name="text">
+    <string>通讯配置</string>
+   </property>
+  </action>
+  <action name="actionExportCsv">
+   <property name="text">
+    <string>导出CSV</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/Clear_256px_1186688_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/Clear_256px_1186688_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除</string>
+   </property>
+  </action>
+  <action name="actionDemoMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Demo</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/pause_circle_outline_128px_1182100_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/pause_circle_outline_128px_1182100_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>暂停</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/printer49.png</normaloff>:/new/toolbar/toolbarImage/printer49.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印</string>
+   </property>
+   <property name="toolTip">
+    <string>打印</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/printer41.png</normaloff>:/new/toolbar/toolbarImage/printer41.png</iconset>
+   </property>
+   <property name="text">
+    <string>报告</string>
+   </property>
+   <property name="toolTip">
+    <string>生成检查报告</string>
+   </property>
+  </action>
+  <action name="actionCase">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/male_user_add_128px_1142198_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/male_user_add_128px_1142198_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>案例</string>
+   </property>
+   <property name="toolTip">
+    <string>添加一个新的病人案例</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/start.png</normaloff>:/new/toolbar/toolbarImage/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始</string>
+   </property>
+   <property name="toolTip">
+    <string>开始启动凝血检测</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/stop-red.png</normaloff>:/new/toolbar/toolbarImage/stop-red.png</iconset>
+   </property>
+   <property name="text">
+    <string>停止</string>
+   </property>
+   <property name="toolTip">
+    <string>停止凝血检测</string>
+   </property>
+  </action>
+  <action name="actionAdvise">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/notes.png</normaloff>:/new/toolbar/toolbarImage/notes.png</iconset>
+   </property>
+   <property name="text">
+    <string>建议</string>
+   </property>
+   <property name="toolTip">
+    <string>检验人员或者医生根据检测结果提供建议</string>
+   </property>
+  </action>
+  <action name="actionGuide">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/help.png</normaloff>:/new/toolbar/toolbarImage/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>指导</string>
+   </property>
+   <property name="toolTip">
+    <string>提供该仪器和软件的指导手册</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/undo.png</normaloff>:/new/toolbar/toolbarImage/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销</string>
+   </property>
+   <property name="toolTip">
+    <string>撤销上一步的操作</string>
+   </property>
+  </action>
+  <action name="actionLogin">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/Login_128px_1186301_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/Login_128px_1186301_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>登陆</string>
+   </property>
+   <property name="toolTip">
+    <string>用户登录</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/logout.png</normaloff>:/new/toolbar/toolbarImage/logout.png</iconset>
+   </property>
+   <property name="text">
+    <string>登出</string>
+   </property>
+   <property name="toolTip">
+    <string>操作人员退出系统</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/logout_128px_1067869_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/logout_128px_1067869_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出该系统</string>
+   </property>
+  </action>
+  <action name="actionPatient">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/patient.png</normaloff>:/new/toolbar/toolbarImage/patient.png</iconset>
+   </property>
+   <property name="text">
+    <string>患者</string>
+   </property>
+   <property name="toolTip">
+    <string>医生或者操作人员选择出检验的患者信息</string>
+   </property>
+  </action>
+  <action name="actionSites">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/Home_Door_128px_1062471_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/Home_Door_128px_1062471_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>站点</string>
+   </property>
+   <property name="toolTip">
+    <string>选择不同站点的检查信息</string>
+   </property>
+  </action>
+  <action name="actionActive">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/flower_128px_1185630_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/flower_128px_1185630_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>激活</string>
+   </property>
+   <property name="toolTip">
+    <string>在目前样本和全部样品进行切换</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/filter_72px_34114_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/filter_72px_34114_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>筛选</string>
+   </property>
+   <property name="toolTip">
+    <string>根据条件筛选出检查信息</string>
+   </property>
+  </action>
+  <action name="actionData">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/blood_95.228200371058px_1179403_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/blood_95.228200371058px_1179403_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>数据</string>
+   </property>
+   <property name="toolTip">
+    <string>显示检查的数据结果</string>
+   </property>
+  </action>
+  <action name="actionZoomin">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/zoom_in_128px_1175892_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/zoom_in_128px_1175892_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="toolTip">
+    <string>放大检测的曲线</string>
+   </property>
+  </action>
+  <action name="actionZoomout">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/zoom_out_128px_1175893_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/zoom_out_128px_1175893_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="toolTip">
+    <string>缩小检测曲线</string>
+   </property>
+  </action>
+  <action name="actionDetails">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/Magnifier_213px_1194797_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/Magnifier_213px_1194797_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>详情</string>
+   </property>
+   <property name="toolTip">
+    <string>显示检测的曲线和详细的结果信息</string>
+   </property>
+  </action>
+  <action name="actionMainWindows">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/center_focus_weak_128px_1181747_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/center_focus_weak_128px_1181747_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>主窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>返回主要的显示窗口</string>
+   </property>
+  </action>
+  <action name="actionMaxShow">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/Maximize_512px_1178190_easyicon.net.png</normaloff>:/new/toolbar/toolbarImage/Maximize_512px_1178190_easyicon.net.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示</string>
+   </property>
+   <property name="toolTip">
+    <string>将凝血曲线最大显示</string>
+   </property>
+  </action>
+  <action name="actionBarCode">
+   <property name="icon">
+    <iconset resource="toolbar.qrc">
+     <normaloff>:/new/toolbar/toolbarImage/barcode.png</normaloff>:/new/toolbar/toolbarImage/barcode.png</iconset>
+   </property>
+   <property name="text">
+    <string>BarCode</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Plot</class>
+   <extends>QFrame</extends>
+   <header>plot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="toolbar.qrc"/>
+ </resources>
+ <connections/>
+</ui>
